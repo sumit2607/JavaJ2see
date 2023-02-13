@@ -1,5 +1,8 @@
 package BankingSystemUsingOOps;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class BankDetails {
@@ -20,13 +23,20 @@ public class BankDetails {
     private Double depositBalance;
     Scanner sc = new Scanner(System.in);
 
+
+    ArrayList<Integer> account = new ArrayList<>();
+    ArrayList<String> accountName = new ArrayList<>();
+
     public void openAccount() {
 
         System.out.println("Please Enter Account Number");
         accNo = sc.nextInt();
+        account.add(accNo);
+
 
         System.out.println("Enter your Name");
         name = sc.next();
+        accountName.add(name);
 
         System.out.println("Enter account opening Balance");
         balance = sc.nextDouble();
@@ -37,8 +47,15 @@ public class BankDetails {
     //method to display account details
     public void displayAccount() {
 
-        System.out.println("your account no is : - " + accNo);
-        System.out.println("your name is: -" + name);
+
+        for (int i = 0; i < account.size(); i++) {
+            System.out.println("your account no is : - " + account.get(i));
+        }
+
+        for (int i = 0; i < accountName.size(); i++) {
+            System.out.println("your name is: -" + accountName.get(i));
+        }
+
         System.out.println("Enter account opening Balance: -" + balance);
     }
 
