@@ -56,7 +56,7 @@ public class BankDetails {
 
     }
 
-    public void depositMoney(){
+    public void depositMoney() {
         System.out.println("Enter the amount to  deposit");
         depositBalance = sc.nextDouble();
         Double finalBalance = balance + depositBalance;
@@ -65,6 +65,15 @@ public class BankDetails {
     }
 
     public void searchAccountByNo() {
+        System.out.println("Enter Your Account number to search Your Details");
+
+        if (name != null) {
+            System.out.println("your name is " + name);
+            System.out.println("your Account no is  " + accNo);
+            System.out.println("Your Bank Balance is " + balance);
+
+
+        }
 
     }
 }
